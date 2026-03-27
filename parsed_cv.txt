@@ -1,0 +1,400 @@
+THARINDU 
+JAYASANKHA
+SOFTWARE ENGINEER
+PROFILE SUMMARY
+Experienced Software Engineer skilled in full-stack development with expertise in React.js, 
+ASP
+.NET Core, and Kubernetes. Proven ability to design scalable, high-performance software solutions, collaborate effectively in agile, cross-functional teams, and align technology with business objectives.
+CAREER EXPERIENCE
+Software Engineer (
+202
+4
+ – 
+Present
+)
+Millennium IT ESP 
+Developed and migrated authentication and authorization systems from Role-Based Access Control (RBAC) to Attribute-Based Access Control (ABAC).
+Integrated and configured ASP.NET Identity Server 4 for secure token management and authentication.
+Deployed and managed containerized microservices with Docker and Kubernetes, ensuring scalability, reliability, and high availability.
+Designed, optimized, and maintained relational (SQL Server, PostgreSQL) and non-relational (MongoDB) databases.
+Utilized Azure cloud services for streamlined application deployment, monitoring, and maintenance.
+Managed inter-service communication through RabbitMQ and implemented caching and session management using Redis.
+Developed Python-based solutions for automated image validation to improve accuracy and reliability in data processing workflows.
+Built and optimized chatbot solutions with Retrieval-Augmented Generation (RAG) pipelines, leveraging Python, LangChain, vector databases, and Node.js.
+Led research and development initiatives on cloud-native AI solutions using Azure Cognitive Services and multiple Large Language Models (LLMs), with a focus on real-time Speech-to-Text processing and advanced speaker diarization.
+Associate Software Engineer
+ (
+202
+3
+ –
+2024
+)
+Millennium IT ESP 
+Built responsive and scalable front-end applications using React.js, TypeScript, and Nx Workspace within a micro frontend architecture.
+Developed modern UI components with Tailwind CSS and Ant Design, ensuring cross-device responsiveness and accessibility.
+Developed RESTful Web APIs with ASP.NET Core, utilizing Entity Framework Core and LINQ for efficient data querying and business logic implementation.
+THARINDU 
+JAYASANKHA
+SOFTWARE ENGINEER
+PROFILE SUMMARY
+Experienced Software Engineer skilled in full-stack development with expertise in React.js, 
+ASP
+.NET Core, and Kubernetes. Proven ability to design scalable, high-performance software solutions, collaborate effectively in agile, cross-functional teams, and align technology with business objectives.
+CAREER EXPERIENCE
+Software Engineer (
+202
+4
+ – 
+Present
+)
+Millennium IT ESP 
+Developed and migrated authentication and authorization systems from Role-Based Access Control (RBAC) to Attribute-Based Access Control (ABAC).
+Integrated and configured ASP.NET Identity Server 4 for secure token management and authentication.
+Deployed and managed containerized microservices with Docker and Kubernetes, ensuring scalability, reliability, and high availability.
+Designed, optimized, and maintained relational (SQL Server, PostgreSQL) and non-relational (MongoDB) databases.
+Utilized Azure cloud services for streamlined application deployment, monitoring, and maintenance.
+Managed inter-service communication through RabbitMQ and implemented caching and session management using Redis.
+Developed Python-based solutions for automated image validation to improve accuracy and reliability in data processing workflows.
+Built and optimized chatbot solutions with Retrieval-Augmented Generation (RAG) pipelines, leveraging Python, LangChain, vector databases, and Node.js.
+Led research and development initiatives on cloud-native AI solutions using Azure Cognitive Services and multiple Large Language Models (LLMs), with a focus on real-time Speech-to-Text processing and advanced speaker diarization.
+Associate Software Engineer
+ (
+202
+3
+ –
+2024
+)
+Millennium IT ESP 
+Built responsive and scalable front-end applications using React.js, TypeScript, and Nx Workspace within a micro frontend architecture.
+Developed modern UI components with Tailwind CSS and Ant Design, ensuring cross-device responsiveness and accessibility.
+Developed RESTful Web APIs with ASP.NET Core, utilizing Entity Framework Core and LINQ for efficient data querying and business logic implementation.
+ 
+Phone
+: (+94) 71 206 70 24 
+Email
+: 
+tharindujayasankha@gmail.com
+ 
+Address
+: Tilwaththa, Remunagoda, Kaluthara 
+LinkedIn
+:
+ 
+https://www.linkedin.com/in/th arindu-jayasankha/
+ 
+GitHub
+:
+ 
+https://github.com/tharindu1999
+Portfolio
+:
+ 
+https://tharindu1999.github.io/portfolio/
+Phone
+: (+94) 71 206 70 24 
+Email
+: 
+tharindujayasankha@gmail.com
+ 
+Address
+: Tilwaththa, Remunagoda, Kaluthara 
+LinkedIn
+:
+ 
+https://www.linkedin.com/in/th arindu-jayasankha/
+ 
+GitHub
+:
+ 
+https://github.com/tharindu1999
+Portfolio
+:
+ 
+https://tharindu1999.github.io/portfolio/
+ 
+TECHNICAL SKILLS
+TECHNICAL SKILLS
+Languages
+:
+C#
+TypeScript
+JavaScript,
+Python
+R
+Backend Development
+:
+ASP.NET Core (Web API, Identity),
+Entity Framework Core, 
+Node js,
+GraphQL
+Frontend
+ Development
+:
+React js,
+Tailwind css,
+Ant Design
+,
+Nx Workspace (Micro Frontend Architecture)
+Cloud & 
+DevOps:
+    
+Docker, 
+Kubernetes, 
+Azure
+, 
+Azure DevOps, 
+ 
+CI/CD Pipelines
+,
+Languages
+:
+C#
+TypeScript
+JavaScript,
+Python
+R
+Backend Development
+:
+ASP.NET Core (Web API, Identity),
+Entity Framework Core, 
+Node js,
+GraphQL
+Frontend
+ Development
+:
+React js,
+Tailwind css,
+Ant Design
+,
+Nx Workspace (Micro Frontend Architecture)
+Cloud & 
+DevOps:
+    
+Docker, 
+Kubernetes, 
+Azure
+, 
+Azure DevOps, 
+ 
+CI/CD Pipelines
+,
+Databases,
+ 
+Caching
+ 
+& 
+Messaging
+:  
+PostgreSQL
+ 
+MongoDB, 
+RabbitMQ
+,
+ 
+Redis
+AI/ML
+ & Tools:
+  
+TensorFlow,
+PyTorch, 
+Hugging Face Transformers
+,
+scikit-learn
+,
+LangChain
+,
+RAG pipelines
+,
+Azure Cognitive Services
+,
+Parsing & Language Tooling
+:
+  
+Nearley.js,
+Moo,
+Domain
+ 
+Specific Language (DSL) Parsing
+REFERENCES
+ 
+ 
+  
+M
+R. 
+Sujeewa Ediriweera
+ 
+   
+Director, Software Engineering
+ 
+ 
+  
+Zitles LLC USA
+   
+Charleston, South Carolina.
+   
++94772068637
+   
+Dr. A.K Chandana
+   
+Senior Lecturer
+   
+Sir John
+ 
+Kotelawala Defen
+c
+e University
+   
+Kandawala Watta, Ratmalana,
+ 
+SriLanka.
+   
+chandanaduwe@kdu.ac.lk
+  
+ 
+   
++94
+112622502
+Databases,
+ 
+Caching
+ 
+& 
+Messaging
+:  
+PostgreSQL
+ 
+MongoDB, 
+RabbitMQ
+,
+ 
+Redis
+AI/ML
+ & Tools:
+  
+TensorFlow,
+PyTorch, 
+Hugging Face Transformers
+,
+scikit-learn
+,
+LangChain
+,
+RAG pipelines
+,
+Azure Cognitive Services
+,
+Parsing & Language Tooling
+:
+  
+Nearley.js,
+Moo,
+Domain
+ 
+Specific Language (DSL) Parsing
+REFERENCES
+ 
+ 
+  
+M
+R. 
+Sujeewa Ediriweera
+ 
+   
+Director, Software Engineering
+ 
+ 
+  
+Zitles LLC USA
+   
+Charleston, South Carolina.
+   
++94772068637
+   
+Dr. A.K Chandana
+   
+Senior Lecturer
+   
+Sir John
+ 
+Kotelawala Defen
+c
+e University
+   
+Kandawala Watta, Ratmalana,
+ 
+SriLanka.
+   
+chandanaduwe@kdu.ac.lk
+  
+ 
+   
++94
+112622502
+Integrated GraphQL APIs to optimize client–server communication in enterprise applications.
+Implemented advanced tokenizer systems and modular rule engines using Nearley.js and Moo in Node.js, capable of parsing complex domain-specific languages (DSLs) and validating high-volume data streams with low latency.
+Intern Software Engineer (2022
+ –2023
+)
+Millennium IT ESP 
+Contributed to the development of a React.js–based spreadsheet-style
+ 
+calculation and reporting system, implementing features such as dynamic formulas, data validation, and custom report generation.
+Applied unit testing and integration testing to ensure software reliability and maintainability.
+Gained hands-on experience with version control (Git), Azure DevOps pipelines, and agile practices such as daily stand-ups, sprint planning, and reviews under Scrum methodology.
+EDUCATIONAL QUALIFICATIONS
+Master of Science in Artificial Intelligence 
+(
+Reading
+)
+University of Moratuwa
+ 
+Bachelor of Science (Honors) in Computer Science
+ (2020 - 2024)
+Informatics Institute of Technology
+GCE 
+Advanced
+ Level
+ (20
+18
+)
+Kalutara Vidyalaya National School 
+R
+ESEARCH
+ A
+REA
+Vision Transformers in Computer Vision
+Developed and implemented Vision Transformer (ViT) models for image classification tasks, exploring the use of transformer architectures in computer vision. Focused on leveraging self-attention mechanisms to capture global image features, improving model performance on large-scale datasets compared to traditional CNNs. Enhanced model accuracy through fine-tuning, data augmentation, and hyperparameter optimization, contributing to advancements in the application of transformers in visual recognition tasks.
+Integrated GraphQL APIs to optimize client–server communication in enterprise applications.
+Implemented advanced tokenizer systems and modular rule engines using Nearley.js and Moo in Node.js, capable of parsing complex domain-specific languages (DSLs) and validating high-volume data streams with low latency.
+Intern Software Engineer (2022
+ –2023
+)
+Millennium IT ESP 
+Contributed to the development of a React.js–based spreadsheet-style
+ 
+calculation and reporting system, implementing features such as dynamic formulas, data validation, and custom report generation.
+Applied unit testing and integration testing to ensure software reliability and maintainability.
+Gained hands-on experience with version control (Git), Azure DevOps pipelines, and agile practices such as daily stand-ups, sprint planning, and reviews under Scrum methodology.
+EDUCATIONAL QUALIFICATIONS
+Master of Science in Artificial Intelligence 
+(
+Reading
+)
+University of Moratuwa
+ 
+Bachelor of Science (Honors) in Computer Science
+ (2020 - 2024)
+Informatics Institute of Technology
+GCE 
+Advanced
+ Level
+ (20
+18
+)
+Kalutara Vidyalaya National School 
+R
+ESEARCH
+ A
+REA
+Vision Transformers in Computer Vision
+Developed and implemented Vision Transformer (ViT) models for image classification tasks, exploring the use of transformer architectures in computer vision. Focused on leveraging self-attention mechanisms to capture global image features, improving model performance on large-scale datasets compared to traditional CNNs. Enhanced model accuracy through fine-tuning, data augmentation, and hyperparameter optimization, contributing to advancements in the application of transformers in visual recognition tasks.
