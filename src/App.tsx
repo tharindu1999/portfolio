@@ -290,7 +290,7 @@ export default function App() {
           ))}
           <Magnetic>
             <a
-              href="/THARINDU_JAYASANKHA_CV.pdf"
+              href={import.meta.env.BASE_URL + "THARINDU_JAYASANKHA_CV.pdf"}
               download="Tharindu_Jayasankha_CV.pdf"
               className="px-6 py-2 glass hover:bg-accent/20 transition-all text-sm uppercase tracking-widest flex items-center gap-2"
             >
@@ -327,7 +327,7 @@ export default function App() {
               </a>
             ))}
             <a
-              href="/THARINDU_JAYASANKHA_CV.pdf"
+              href={import.meta.env.BASE_URL + "THARINDU_JAYASANKHA_CV.pdf"}
               download="Tharindu_Jayasankha_CV.pdf"
               onClick={() => setIsMenuOpen(false)}
               className="px-8 py-4 bg-accent text-white rounded-full flex items-center gap-2"
