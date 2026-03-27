@@ -126,7 +126,7 @@ const ACHIEVEMENTS = [
     organization: "Millennium IT ESP",
     description: "Awarded for outstanding contribution and exceptional performance demonstrating excellence and impact in developing the 'Rebuild Sri Lanka Data Collection Platform' following Cyclone Ditwa.",
     icon: <ArrowUpRight size={24} />,
-    image: "/award.jpg"
+    image: import.meta.env.BASE_URL + "award.jpg"
   }
 ];
 
@@ -621,7 +621,7 @@ export default function App() {
               </Magnetic>
               <Magnetic>
                 <a 
-                  href="/THARINDU_JAYASANKHA_CV.pdf"
+                  href={import.meta.env.BASE_URL + "THARINDU_JAYASANKHA_CV.pdf"}
                   download="Tharindu_Jayasankha_CV.pdf"
                   className="px-12 py-6 glass hover:bg-white/5 transition-all rounded-full flex items-center gap-3"
                 >
