@@ -76,29 +76,49 @@ const SKILL_GROUPS = [
     skills: ["C#", "TypeScript", "JavaScript", "Python", "R"]
   },
   {
-    title: "Backend",
+    title: "Backend Development",
     icon: <Settings size={20} />,
-    skills: ["ASP.NET Core", "Entity Framework", "Node.js", "GraphQL"]
+    skills: ["ASP.NET Core (Web API, Identity)", "Entity Framework Core", "Node.js", "GraphQL"]
   },
   {
-    title: "Frontend",
+    title: "Frontend Development",
     icon: <Code2 size={20} />,
-    skills: ["React.js", "Tailwind CSS", "Ant Design", "Nx Workspace"]
+    skills: ["React.js", "Tailwind CSS", "Ant Design", "Nx Workspace (Micro Frontend)"]
   },
   {
-    title: "Cloud & DevOps",
-    icon: <Cloud size={20} />,
-    skills: ["Docker", "Kubernetes", "Azure", "Azure DevOps", "CI/CD"]
-  },
-  {
-    title: "Databases & Messaging",
+    title: "Databases, Caching & Messaging",
     icon: <Database size={20} />,
     skills: ["PostgreSQL", "MongoDB", "RabbitMQ", "Redis"]
   },
   {
-    title: "AI/ML & Tools",
+    title: "Cloud, DevOps & Monitoring",
+    icon: <Cloud size={20} />,
+    skills: ["Docker", "Kubernetes", "Azure", "Azure DevOps", "CI/CD Pipelines", "ELK Stack", "Grafana"]
+  },
+  {
+    title: "ML & Deep Learning",
     icon: <BrainCircuit size={20} />,
-    skills: ["TensorFlow", "PyTorch", "Hugging Face", "LangChain", "RAG"]
+    skills: ["TensorFlow", "PyTorch", "Hugging Face Transformers", "scikit-learn"]
+  },
+  {
+    title: "LLM & Applied AI",
+    icon: <Cpu size={20} />,
+    skills: ["RAG Pipelines", "LangChain", "Vector Search", "OpenAI API", "Gemini API", "Azure Cognitive Services"]
+  },
+  {
+    title: "Vector Databases",
+    icon: <Database size={20} />,
+    skills: ["Chroma", "pgvector (PostgreSQL)"]
+  },
+  {
+    title: "Computer Vision",
+    icon: <Code2 size={20} />,
+    skills: ["OpenCV", "Vision Transformers (ViT)", "CNNs"]
+  },
+  {
+    title: "Parsing & Language Tooling",
+    icon: <Terminal size={20} />,
+    skills: ["Nearley.js", "Moo", "DSL Design"]
   }
 ];
 
@@ -376,7 +396,7 @@ export default function App() {
             >
               <div className="max-w-xl space-y-4">
                 <p className="text-lg text-white/50 leading-relaxed">
-                  Experienced Software Engineer skilled in full-stack development with expertise in React.js, ASP.NET Core, and Kubernetes. Proven ability to design scalable, high-performance software solutions.
+                  Full Stack Software Engineer with experience in building enterprise-scale applications, cloud-based systems, and applied AI solutions. Skilled in developing scalable frontend and backend systems, working with modern cloud environments, and applying AI capabilities such as LLM integrations, cloud AI services, and AI-assisted engineering workflows.
                 </p>
                 <div className="flex flex-wrap gap-4 text-xs text-white/40 uppercase tracking-widest">
                   <span className="flex items-center gap-1"><Phone size={12} /> (+94) 71 206 70 24</span>
