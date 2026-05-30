@@ -285,6 +285,9 @@ export default function App() {
         )}
       </AnimatePresence>
 
+      {/* Navigation gradient overlay */}
+      <div className="fixed top-0 left-0 right-0 z-30 h-32 pointer-events-none bg-gradient-to-b from-bg/90 via-bg/40 to-transparent" />
+
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 px-6 py-8 md:px-12 flex justify-between items-center">
         <motion.div
