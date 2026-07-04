@@ -1,0 +1,26 @@
+{
+  "projectId": "f0831877-7d42-4c38-87f0-e5106f0c4034",
+  "shape": "package",
+  "pkg": "react-example",
+  "globalName": "PortfolioDS",
+  "buildCmd": "npm run build && node .design-sync/copy-css.mjs",
+  "srcDir": "src/components",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": ".design-sync/.cache/app.css",
+  "readmeHeader": ".design-sync/conventions.md",
+  "overrides": {
+    "GradientHeading": { "cardMode": "column", "viewport": "1280x760" },
+    "SectionHeading": { "cardMode": "column" }
+  },
+  "componentSrcMap": {
+    "GlassCard": "src/components/GlassCard.tsx",
+    "Button": "src/components/Button.tsx",
+    "Magnetic": "src/components/Magnetic.tsx",
+    "SectionHeading": "src/components/SectionHeading.tsx",
+    "Tag": "src/components/Tag.tsx",
+    "IconButton": "src/components/IconButton.tsx",
+    "GradientHeading": "src/components/GradientHeading.tsx",
+    "ExperienceCard": "src/components/ExperienceCard.tsx",
+    "InfoCard": "src/components/InfoCard.tsx"
+  }
+}
