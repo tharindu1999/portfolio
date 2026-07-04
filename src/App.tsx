@@ -13,6 +13,7 @@ import {
   ExperienceCard,
   InfoCard
 } from "./components";
+import cvFile from "./assets/Tharindu_Jayasankha.pdf";
 
 // Brand accent (#ff4e00) as r,g,b for rgba() glue used by the canvas/glow effects.
 const ACCENT_RGB = "255, 78, 0";
@@ -23,13 +24,13 @@ const MARQUEE_ITEMS = [
 ];
 
 const SKILL_GROUPS = [
-  { n: 1, name: "Languages", items: ["C#", "TypeScript", "JavaScript", "Python"] },
-  { n: 2, name: "Backend Development", items: ["ASP.NET Core (Web API, Identity)", "Entity Framework Core", "Node.js", "REST", "GraphQL"] },
-  { n: 3, name: "Frontend Development", items: ["React.js", "Tailwind CSS", "Ant Design", "Nx Workspace (Micro Frontends)"] },
-  { n: 4, name: "Databases & Messaging", items: ["PostgreSQL", "SQL Server", "MongoDB", "Redis", "RabbitMQ"] },
-  { n: 5, name: "Cloud & DevOps", items: ["Microsoft Azure", "Docker", "Kubernetes", "Azure DevOps", "CI/CD Pipelines", "ELK Stack", "Grafana"] },
-  { n: 6, name: "AI & Machine Learning", items: ["RAG Pipelines", "LangChain", "OpenAI & Gemini APIs", "Azure Cognitive Services", "Chroma", "pgvector", "Agentic Coding (Cursor, Codex, Claude)", "PyTorch", "TensorFlow", "Hugging Face Transformers", "OpenCV"] },
-  { n: 7, name: "Parsing & Workflow Engines", items: ["Nearley.js", "Moo", "Domain Specific Languages", "Rule Engines"] }
+  { name: "Languages", items: ["C#", "TypeScript", "JavaScript", "Python"] },
+  { name: "Backend Development", items: ["ASP.NET Core (Web API, Identity)", "Entity Framework Core", "Node.js", "REST", "GraphQL"] },
+  { name: "Frontend Development", items: ["React.js", "Tailwind CSS", "Ant Design", "Nx Workspace (Micro Frontends)"] },
+  { name: "Databases & Messaging", items: ["PostgreSQL", "SQL Server", "MongoDB", "Redis", "RabbitMQ"] },
+  { name: "Cloud & DevOps", items: ["Microsoft Azure", "Docker", "Kubernetes", "Azure DevOps", "CI/CD Pipelines", "ELK Stack", "Grafana"] },
+  { name: "AI & Machine Learning", items: ["RAG Pipelines", "LangChain", "OpenAI & Gemini APIs", "Azure Cognitive Services", "Chroma", "pgvector", "Agentic Coding (Cursor, Codex, Claude)", "PyTorch", "TensorFlow", "Hugging Face Transformers", "OpenCV"] },
+  { name: "Parsing & Workflow Engines", items: ["Nearley.js", "Moo", "Domain Specific Languages", "Rule Engines"] }
 ];
 
 const EXPERIENCE = [
@@ -71,19 +72,43 @@ const EXPERIENCE = [
 
 const HERO_ROLES = ["Full Stack Software Engineer", "Cloud Native Developer", "RAG & LLM Builder"];
 
-const TERMINAL_LINES: { t: string; c: string }[] = [
-  { t: "$ whoami", c: "var(--color-accent)" },
-  { t: "tharindu, full stack software engineer · applied AI", c: "rgba(255,255,255,.75)" },
-  { t: "$ cat stack.json", c: "var(--color-accent)" },
-  { t: '{ "backend": [".NET", "Node.js"],', c: "rgba(255,255,255,.55)" },
-  { t: '  "frontend": ["React", "TypeScript"],', c: "rgba(255,255,255,.55)" },
-  { t: '  "cloud": ["Azure", "Kubernetes"],', c: "rgba(255,255,255,.55)" },
-  { t: '  "ai": ["LangChain", "RAG", "ViT"] }', c: "rgba(255,255,255,.55)" },
-  { t: "$ ./career --status", c: "var(--color-accent)" },
-  { t: "✔ 3+ years in production", c: "#7ee787" },
-  { t: "✔ CEO Special Award 2026", c: "#7ee787" },
-  { t: "✔ MSc AI in progress, UoM", c: "#7ee787" }
+type TermLine = { t?: string; c?: string; json?: boolean; progress?: boolean };
+
+const TERMINAL_LINES: TermLine[] = [
+  { t: "$ whoami" },
+  { t: "tharindu, full stack software engineer", c: "rgba(255,255,255,.8)" },
+  { t: "$ cat stack.json" },
+  { t: '{ "languages": ["C#", "TypeScript", "Python"],', json: true },
+  { t: '  "backend": ["ASP.NET Core", "Node.js", "GraphQL"],', json: true },
+  { t: '  "frontend": ["React", "Tailwind", "Nx"],', json: true },
+  { t: '  "data": ["PostgreSQL", "MongoDB", "Redis", "RabbitMQ"],', json: true },
+  { t: '  "cloud": ["Azure", "Docker", "Kubernetes"],', json: true },
+  { t: '  "ai": ["LangChain", "RAG", "pgvector", "ViT"] }', json: true },
+  { t: "$ ./deploy --production" },
+  { t: "→ building image · pushing to registry · rolling out", c: "rgba(255,255,255,.5)" },
+  { progress: true },
+  { t: "✔ 3+ years shipping in production", c: "#7ee787" }
 ];
+
+/** Prompt/JSON syntax highlighting for a finished terminal line; null = plain text. */
+const termHtml = (line: TermLine, accent: string): string | null => {
+  if (line.progress || !line.t) return null;
+  const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const t = line.t;
+  if (t.startsWith("$ ")) {
+    let body = esc(t.slice(2));
+    body = body.replace(/(--?[a-zA-Z][a-zA-Z-]*)/g, `<span style="color:${accent}">$1</span>`);
+    return `<span style="color:#7ee787">$</span> <span style="color:#e6edf3">${body}</span>`;
+  }
+  if (line.json) {
+    return esc(t).replace(/("[^"]*")(\s*:)?/g, (_m, str, colon) =>
+      colon
+        ? `<span style="color:#79c0ff">${str}</span><span style="color:rgba(255,255,255,.45)">${colon}</span>`
+        : `<span style="color:#ffa657">${str}</span>`
+    );
+  }
+  return null;
+};
 
 const prefersReducedMotion = () =>
   typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -215,12 +240,17 @@ const Terminal = () => {
     const el = ref.current;
     if (!el) return;
     const accent = getComputedStyle(document.documentElement).getPropertyValue("--color-accent").trim() || `rgb(${ACCENT_RGB})`;
-    const colorOf = (c: string) => (c === "var(--color-accent)" ? accent : c);
     if (prefersReducedMotion()) {
       TERMINAL_LINES.forEach((l) => {
         const d = document.createElement("div");
-        d.textContent = l.t;
-        d.style.color = colorOf(l.c);
+        if (l.progress) {
+          d.textContent = "[██████████] 100% · deployed";
+          d.style.color = "#7ee787";
+        } else {
+          d.style.color = l.c || (l.json ? "rgba(255,255,255,.45)" : "#e6edf3");
+          const h = termHtml(l, accent);
+          if (h) d.innerHTML = h; else d.textContent = l.t ?? "";
+        }
         el.appendChild(d);
       });
       return;
@@ -231,20 +261,46 @@ const Terminal = () => {
     let started = false;
     const timers: number[] = [];
     const run = () => {
+      if (el.dataset.ran) return;
+      el.dataset.ran = "1";
+      el.textContent = "";
       let li = 0;
       const typeLine = () => {
         if (li >= TERMINAL_LINES.length) return;
         const line = TERMINAL_LINES[li];
         const div = document.createElement("div");
-        div.style.color = colorOf(line.c);
         el.appendChild(div);
+        el.appendChild(cursor);
+        if (line.progress) {
+          div.style.color = "rgba(255,255,255,.55)";
+          let k = 0;
+          const stepBar = () => {
+            div.textContent = "[" + "█".repeat(k) + "·".repeat(10 - k) + "] " + k * 10 + "%";
+            div.appendChild(cursor);
+            if (k < 10) { k++; timers.push(window.setTimeout(stepBar, 110)); }
+            else {
+              div.textContent = "[██████████] 100% · deployed";
+              div.style.color = "#7ee787";
+              div.appendChild(cursor);
+              li++; timers.push(window.setTimeout(typeLine, 250));
+            }
+          };
+          stepBar();
+          return;
+        }
+        div.style.color = line.c || (line.json ? "rgba(255,255,255,.45)" : "#e6edf3");
+        const text = line.t ?? "";
         let ci = 0;
         const typeChar = () => {
           ci++;
-          div.textContent = line.t.slice(0, ci);
+          div.textContent = text.slice(0, ci);
           div.appendChild(cursor);
-          if (ci < line.t.length) timers.push(window.setTimeout(typeChar, line.t.startsWith("$") ? 42 : 14));
-          else { li++; timers.push(window.setTimeout(typeLine, line.t.startsWith("$") ? 300 : 120)); }
+          if (ci < text.length) timers.push(window.setTimeout(typeChar, text.startsWith("$") ? 42 : 14));
+          else {
+            const h = termHtml(line, accent);
+            if (h) { div.innerHTML = h; div.appendChild(cursor); }
+            li++; timers.push(window.setTimeout(typeLine, text.startsWith("$") ? 300 : 120));
+          }
         };
         typeChar();
       };
@@ -265,7 +321,11 @@ const Terminal = () => {
         <span className="w-3 h-3 rounded-full" style={{ background: "#28c840" }} />
         <span className="text-white/40 font-mono text-xs ml-3">tharindu@portfolio: zsh</span>
       </div>
-      <div ref={ref} className="px-6 py-5 font-mono text-sm overflow-hidden text-white/75" style={{ lineHeight: 1.9, height: 340 }} />
+      <div
+        ref={ref}
+        className="term-body relative px-6 py-5 font-mono text-sm overflow-hidden text-white/75"
+        style={{ lineHeight: 1.9, height: 400, whiteSpace: "pre" }}
+      />
     </div>
   );
 };
@@ -294,7 +354,7 @@ const FLOATING_SNIPPETS: { text: string; style: React.CSSProperties }[] = [
 ];
 
 export default function App() {
-  const cvHref = import.meta.env.BASE_URL + "THARINDU_JAYASANKHA_CV.pdf";
+  const cvHref = cvFile;
 
   return (
     <div className="relative selection:bg-accent selection:text-white">
@@ -331,12 +391,12 @@ export default function App() {
         {/* ============ HERO ============ */}
         <section className="min-h-screen flex items-center relative overflow-hidden">
           {FLOATING_SNIPPETS.map((s) => (
-            <div key={s.text} data-anim="1" className="absolute font-mono hidden sm:block" style={s.style}>
+            <div key={s.text} data-anim="1" className="absolute font-mono hidden min-[900px]:block" style={s.style}>
               {s.text}
             </div>
           ))}
 
-          <div className="max-w-[1160px] mx-auto w-full relative grid grid-cols-1 lg:grid-cols-[1.25fr_1fr] gap-16 items-center px-6 md:px-8 pt-36 pb-20">
+          <div className="hero-grid max-w-[1160px] mx-auto w-full relative grid grid-cols-1 lg:grid-cols-[1.25fr_1fr] gap-16 items-center px-6 md:px-8 pt-36 pb-20">
             <div>
               <p className="text-accent font-serif italic text-2xl mb-3">Hi, I’m</p>
               <GradientHeading size="xl" as="h1">
@@ -460,9 +520,8 @@ export default function App() {
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-2">
             {SKILL_GROUPS.map((g) => (
-              <Reveal key={g.n}>
+              <Reveal key={g.name}>
                 <div className="glass rounded-2xl p-[26px] h-full">
-                  <p className="text-accent font-mono text-xs mb-1.5">0{g.n}</p>
                   <h4 className="text-white text-lg font-bold mb-4">{g.name}</h4>
                   <div className="flex flex-wrap gap-2">
                     {g.items.map((s) => (
@@ -499,7 +558,7 @@ export default function App() {
               <InfoCard title="MSc in Artificial Intelligence" subtitle="University of Moratuwa" meta="Expected 2026" />
             </Reveal>
             <Reveal>
-              <InfoCard title="BSc (Hons) Computer Science, 2:1" subtitle="University of Westminster, UK (IIT)" meta="2020 – 2024" />
+              <InfoCard title="BSc (Hons) Computer Science" subtitle="University of Westminster, UK (IIT)" meta="Second Class Upper Division · 2020 – 2024" />
             </Reveal>
           </div>
         </section>
@@ -555,8 +614,7 @@ export default function App() {
               <img
                 src={import.meta.env.BASE_URL + "award.jpg"}
                 alt="CEO Special Award 2026 trophy, Millennium IT ESP"
-                className="block w-full h-full object-cover"
-                style={{ minHeight: 380 }}
+                className="block w-full object-cover h-[280px] md:h-full md:min-h-[380px]"
               />
               <div className="px-8 py-10 md:px-12 md:py-11 flex flex-col justify-center">
                 <p className="text-accent font-mono text-xs mb-3">// awarded 2026</p>
