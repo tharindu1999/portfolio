@@ -5,6 +5,7 @@
 
 import { motion } from "motion/react";
 import React, { useEffect, useRef } from "react";
+import { Code2, Server, Layout, Database, Cloud, Sparkles, GitBranch } from "lucide-react";
 import {
   Button,
   Magnetic,
@@ -24,13 +25,13 @@ const MARQUEE_ITEMS = [
 ];
 
 const SKILL_GROUPS = [
-  { name: "Languages", items: ["C#", "TypeScript", "JavaScript", "Python"] },
-  { name: "Backend Development", items: ["ASP.NET Core (Web API, Identity)", "Entity Framework Core", "Node.js", "REST", "GraphQL"] },
-  { name: "Frontend Development", items: ["React.js", "Tailwind CSS", "Ant Design", "Nx Workspace (Micro Frontends)"] },
-  { name: "Databases & Messaging", items: ["PostgreSQL", "SQL Server", "MongoDB", "Redis", "RabbitMQ"] },
-  { name: "Cloud & DevOps", items: ["Microsoft Azure", "Docker", "Kubernetes", "Azure DevOps", "CI/CD Pipelines", "ELK Stack", "Grafana"] },
-  { name: "AI & Machine Learning", items: ["RAG Pipelines", "LangChain", "OpenAI & Gemini APIs", "Azure Cognitive Services", "Chroma", "pgvector", "Agentic Coding (Cursor, Codex, Claude)", "PyTorch", "TensorFlow", "Hugging Face Transformers", "OpenCV"] },
-  { name: "Parsing & Workflow Engines", items: ["Nearley.js", "Moo", "Domain Specific Languages", "Rule Engines"] }
+  { name: "Languages", Icon: Code2, items: ["C#", "TypeScript", "JavaScript", "Python"] },
+  { name: "Backend Development", Icon: Server, items: ["ASP.NET Core (Web API, Identity)", "Entity Framework Core", "Node.js", "REST", "GraphQL"] },
+  { name: "Frontend Development", Icon: Layout, items: ["React.js", "Tailwind CSS", "Ant Design", "Nx Workspace (Micro Frontends)"] },
+  { name: "Databases & Messaging", Icon: Database, items: ["PostgreSQL", "SQL Server", "MongoDB", "Redis", "RabbitMQ"] },
+  { name: "Cloud & DevOps", Icon: Cloud, items: ["Microsoft Azure", "Docker", "Kubernetes", "Azure DevOps", "CI/CD Pipelines", "ELK Stack", "Grafana"] },
+  { name: "AI & Machine Learning", Icon: Sparkles, items: ["RAG Pipelines", "LangChain", "OpenAI & Gemini APIs", "Azure Cognitive Services", "Chroma", "pgvector", "Agentic Coding (Cursor, Codex, Claude)", "PyTorch", "TensorFlow", "Hugging Face Transformers", "OpenCV"] },
+  { name: "Parsing & Workflow Engines", Icon: GitBranch, items: ["Nearley.js", "Moo", "Domain Specific Languages", "Rule Engines"] }
 ];
 
 const EXPERIENCE = [
@@ -415,21 +416,21 @@ export default function App() {
                 Full stack engineer with 3+ years building enterprise systems end to end, from React micro frontends
                 to .NET microservices on Azure &amp; Kubernetes, now shipping production RAG chatbots and LLM integrations.
               </p>
-              <div className="flex gap-4 mt-9 flex-wrap">
-                <Magnetic>
-                  <Button variant="accent" size="lg" href="mailto:tharindujayasankha@gmail.com">
+              <div className="flex flex-col sm:flex-row gap-4 mt-9">
+                <Magnetic className="w-full sm:w-auto">
+                  <Button variant="accent" size="lg" className="w-full sm:w-auto" href="mailto:tharindujayasankha@gmail.com">
                     Get in touch ↗
                   </Button>
                 </Magnetic>
-                <Button variant="glass" size="lg" href={cvHref} download="Tharindu_Jayasankha_CV.pdf">
+                <Button variant="glass" size="lg" className="w-full sm:w-auto" href={cvHref} download="Tharindu_Jayasankha_CV.pdf">
                   Download CV
                 </Button>
               </div>
               <div className="flex gap-3 mt-7">
-                <Button variant="glass" size="sm" href="https://github.com/tharindu1999" target="_blank">
+                <Button variant="glass" size="sm" className="flex-1 sm:flex-none" href="https://github.com/tharindu1999" target="_blank">
                   GitHub ↗
                 </Button>
-                <Button variant="glass" size="sm" href="https://www.linkedin.com/in/tharindu-jayasankha/" target="_blank">
+                <Button variant="glass" size="sm" className="flex-1 sm:flex-none" href="https://www.linkedin.com/in/tharindu-jayasankha/" target="_blank">
                   LinkedIn ↗
                 </Button>
               </div>
@@ -522,7 +523,12 @@ export default function App() {
             {SKILL_GROUPS.map((g) => (
               <Reveal key={g.name}>
                 <div className="glass rounded-2xl p-[26px] h-full">
-                  <h4 className="text-white text-lg font-bold mb-4">{g.name}</h4>
+                  <div className="flex items-center gap-3 mb-[18px]">
+                    <span className="glass text-accent flex items-center justify-center w-10 h-10 rounded-[10px] shrink-0">
+                      <g.Icon size={20} strokeWidth={1.8} />
+                    </span>
+                    <h4 className="text-white text-lg font-bold m-0">{g.name}</h4>
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {g.items.map((s) => (
                       <span key={s} className={skillChip}>{s}</span>
@@ -638,21 +644,21 @@ export default function App() {
             <p className="text-white/50 text-[17px] mt-6 mx-auto max-w-[520px] leading-[1.7]">
               Open to software engineering roles. Kalutara, Sri Lanka, remote friendly.
             </p>
-            <div className="flex gap-4 justify-center mt-10 flex-wrap">
-              <Magnetic>
-                <Button variant="accent" size="lg" href="mailto:tharindujayasankha@gmail.com">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <Magnetic className="w-full sm:w-auto">
+                <Button variant="accent" size="lg" className="w-full sm:w-auto max-w-full !px-6 sm:!px-10 break-all" href="mailto:tharindujayasankha@gmail.com">
                   tharindujayasankha@gmail.com
                 </Button>
               </Magnetic>
-              <Button variant="glass" size="lg" href="tel:+94712067024">
+              <Button variant="glass" size="lg" className="w-full sm:w-auto" href="tel:+94712067024">
                 +94 71 206 70 24
               </Button>
             </div>
             <div className="flex gap-3 justify-center mt-6">
-              <Button variant="glass" size="sm" href="https://github.com/tharindu1999" target="_blank">
+              <Button variant="glass" size="sm" className="flex-1 sm:flex-none max-w-[180px]" href="https://github.com/tharindu1999" target="_blank">
                 GitHub ↗
               </Button>
-              <Button variant="glass" size="sm" href="https://www.linkedin.com/in/tharindu-jayasankha/" target="_blank">
+              <Button variant="glass" size="sm" className="flex-1 sm:flex-none max-w-[180px]" href="https://www.linkedin.com/in/tharindu-jayasankha/" target="_blank">
                 LinkedIn ↗
               </Button>
             </div>
