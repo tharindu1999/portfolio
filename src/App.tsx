@@ -397,8 +397,20 @@ export default function App() {
             </div>
           ))}
 
-          <div className="hero-grid max-w-[1160px] mx-auto w-full relative grid grid-cols-1 lg:grid-cols-[1.25fr_1fr] gap-16 items-center px-6 md:px-8 pt-36 pb-20">
-            <div>
+          <div className="hero-grid max-w-[1160px] mx-auto w-full relative grid grid-cols-1 lg:grid-cols-[1.25fr_1fr] gap-16 items-center px-6 md:px-8 pt-52 lg:pt-36 pb-20">
+            {/* Mobile-only compact profile — the only place it fits in the single-column layout: top-right, above the name */}
+            <div className="lg:hidden absolute right-6 md:right-8 top-20 z-10">
+              <div className="glass rounded-2xl p-1.5" style={{ animation: "floatY 6s ease-in-out infinite alternate" }}>
+                <img
+                  src={import.meta.env.BASE_URL + "profile.jpg"}
+                  alt="Tharindu Jayasankha"
+                  className="block object-cover object-top rounded-xl"
+                  style={{ width: 96, height: 112 }}
+                />
+              </div>
+            </div>
+
+            <div className="text-left">
               <p className="text-accent font-serif italic text-2xl mb-3">Hi, I’m</p>
               <GradientHeading size="xl" as="h1">
                 THARINDU <br /> JAYASANKHA
@@ -412,9 +424,9 @@ export default function App() {
                   style={{ height: 22, animation: "blinkCursor 1s steps(1) infinite" }}
                 />
               </p>
-              <p className="text-white/60 text-[17px] leading-[1.7] max-w-[540px] mt-5">
-                Full stack engineer with 3+ years building enterprise systems end to end, from React micro frontends
-                to .NET microservices on Azure &amp; Kubernetes, now shipping production RAG chatbots and LLM integrations.
+              <p className="text-white/60 text-[17px] leading-[1.7] max-w-[540px] mt-5 text-justify">
+                3+ years building enterprise systems end to end  from React micro frontends to .NET microservices
+                on Azure &amp; Kubernetes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-9">
                 <Magnetic className="w-full sm:w-auto">
@@ -487,15 +499,14 @@ export default function App() {
           </Reveal>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 mt-2 items-start">
             <Reveal>
-              <p className="text-white/70 text-[17px] leading-[1.8]">
-                I’m a <span className="text-accent">full stack software engineer</span> with over three years of
+              <p className="text-white/70 text-[17px] leading-[1.8] text-justify">
+                <span className="text-accent">Full stack software engineer</span> with over three years of
                 experience building and scaling enterprise applications end to end, from React micro frontends to
                 .NET microservices running on Azure and Kubernetes.
               </p>
-              <p className="text-white/70 text-[17px] leading-[1.8] mt-5">
-                I’m increasingly focused on <span className="font-serif italic text-accent">applied AI</span>, with
-                hands on delivery of production RAG chatbots, LLM integrations, and AI assisted engineering
-                workflows — and currently reading for an MSc in Artificial Intelligence at the University of Moratuwa.
+              <p className="text-white/70 text-[17px] leading-[1.8] mt-5 text-justify">
+                Increasingly focused on <span className="font-serif italic text-accent">applied AI</span>, with
+                hands on delivery of production RAG chatbots, LLM integrations, and AI assisted engineering workflows.
               </p>
               <div className="flex gap-8 mt-9">
                 <div>
@@ -575,12 +586,12 @@ export default function App() {
             <SectionHeading title="Research Area" animate={false} />
           </Reveal>
           <Reveal className="mt-2">
-            <div className="glass rounded-2xl p-9">
+            <div className="glass rounded-2xl p-6 md:p-9 text-center">
               <p className="text-accent font-mono text-xs mb-2.5">// computer vision · vision transformers</p>
               <h3 className="text-white text-[26px] font-bold tracking-tight">
                 Gemstone Identification &amp; Authentication Using Vision Transformers
               </h3>
-              <p className="text-white/60 text-base leading-[1.8] mt-4 max-w-[840px]">
+              <p className="text-white/60 text-base leading-[1.8] mt-4 max-w-[840px] mx-auto text-justify">
                 Developed and implemented Vision Transformer (ViT) models for image classification, applied to the
                 real world problem of identifying and authenticating gemstones without reliance on expert knowledge
                 or specialized tools. Leveraged self attention mechanisms to capture global image features,
@@ -588,7 +599,7 @@ export default function App() {
                 quality and classification reliability. Enhanced accuracy through fine tuning, data augmentation,
                 and hyperparameter optimization.
               </p>
-              <div className="flex gap-8 mt-7 flex-wrap">
+              <div className="flex gap-8 mt-7 flex-wrap justify-center">
                 {[
                   { value: "75.87%", label: "Testing accuracy", accent: true },
                   { value: "0.72", label: "F1 score" },
@@ -601,7 +612,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-2 mt-6">
+              <div className="flex flex-wrap gap-2 mt-6 justify-center">
                 {["PyTorch", "Vision Transformers", "Self Attention", "Data Augmentation", "OpenCV"].map((s) => (
                   <span key={s} className={skillChip}>{s}</span>
                 ))}
@@ -622,7 +633,7 @@ export default function App() {
                 alt="CEO Special Award 2026 trophy, Millennium IT ESP"
                 className="block w-full object-cover h-[280px] md:h-full md:min-h-[380px]"
               />
-              <div className="px-8 py-10 md:px-12 md:py-11 flex flex-col justify-center">
+              <div className="px-6 py-8 md:px-12 md:py-11 flex flex-col justify-center text-left">
                 <p className="text-accent font-mono text-xs mb-3">// awarded 2026</p>
                 <h3 className="text-accent font-serif italic text-[32px] font-normal">CEO Special Award 2026</h3>
                 <p className="text-white font-bold text-lg mt-2.5">Millennium IT ESP</p>

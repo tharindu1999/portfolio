@@ -24,7 +24,7 @@ export function SectionHeading({ title, icon, variant = "split", animate = true 
 
   if (variant === "inline") {
     return (
-      <div className="flex items-center gap-4 mb-12">
+      <div className="flex items-center justify-center gap-4 mb-12">
         <motion.h2 {...motionProps} className="text-4xl font-serif italic">
           {title}
         </motion.h2>
@@ -34,11 +34,11 @@ export function SectionHeading({ title, icon, variant = "split", animate = true 
   }
 
   return (
-    <div className="flex justify-between items-end mb-16">
+    <div className="flex flex-col items-center text-center gap-2 mb-16">
+      {icon && <div className="text-accent">{icon}</div>}
       <motion.h2 {...motionProps} className="text-4xl md:text-6xl font-serif italic">
         {title}
       </motion.h2>
-      {icon && <div className="text-accent mb-2">{icon}</div>}
     </div>
   );
 }
